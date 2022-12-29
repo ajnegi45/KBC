@@ -1,0 +1,61 @@
+print("welcome To Kon Bnega Crorepati(KBC)")
+print("Lets begain the game")
+ques = [
+  "ques 1. india got independence in",
+  "ques 2. first president of India",
+  "Q 3.‘Gobar gas’ contains mainly which gas?",
+  "Q 4.. Which is the biggest Public Sector undertaking in the country?",
+  "Q.5 Which rocks is transformed into marble?",
+  "Q.6 At which one place did Mahatma Gandhi first start his Satyagraha in India?",
+  "Q7 Who appoints the Chief Election Commissioner of India?",
+  "Q.8 With which is the ‘Tennis court oath’ associated?",
+  "Q.27 Who was re-elected as the President of Comoros?",
+  "Q.31 First Indian Army Mountaineering Expedition held in which Mountain?",
+  "Q.32 Worlds longest salt cave found in __________.",
+  "Q.35 Which IIT have developed AI based disease detector?",
+  "Q.38 Who has been appointed as the Flag Officer Commanding Maharashtra Naval Area?",
+]
+opt = [
+  "(A) 1920\n(B) 1947\n(C) 1950\n(c) 1955",
+  "(A) Rajendar Parshad \n(B) APJ Kalam \n(C) Suba rao \n(D) Gandhi ji",
+  "(A) Methane\n(B) Hydrogen\n(C) Oxygen\n(D) Silicon",
+  "(A) Buses\n(B) IT Sector\n(C) Railways\n(D) Banking Sector",
+  "(A) Limestone\n(B) Black stone\n(C) Red stone\n(D) Grenite",
+  "A) Bhuj\n(B) Madras\n(C) Champaran\n(D) Guhawati",
+  "(A) Prime Minister\n(B) Deputy Minister\n(C) President\n(D) Chief Minister",
+  "(A) French Revolution\n(B) Japan Revolution\n(C) American Revolution\n(D) African Revolution ",
+  "(A) Azali Assoumani\n(B) Mahamadou Ahamada\n(C) Ikililou Dhoinine\n(D) Ahmed Abdallah",
+  "(A) Mt Kamet\n(B) Mt Kangchenjunga\n(C) Mt Makalu\n(D) Mt Nanda Devi",
+  "(A) India\n(B) Japan\n(C) Israel\n(D) Thailand",
+  "(A) IIT-Hyderabad\n(B) IIT-Madras\n(C) IIT-Delhi\n(D) IIT-Mumbai",
+  "(A) Admiral Sureesh Mehta\n(B) Admiral Rajesh Pendharkar\n(C) Admiral Arun Prakash\n(D) Admiral Vishnu Bhagwat",
+  "(A) Goa Bengal\n(B) Chilika Bengal\n(C) Brahmaputra Bengal\n(D) R V Bengal Ganga"
+]
+sol = ["B", "A", "A", "C", "A", "C", "C", "A", "A", "C", "C", "C", "B"]
+round = [
+  "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth",
+  "ninth", "tenth", "eleventh", "twelth", "thirteenth"
+]
+prize = [
+  10000, 20000, 40000, 80000, 100000, 200000, 400000, 800000, 1600000, 3200000,
+  5000000, 10000000, 30000000
+]
+
+p = 0
+for i in round:
+  print("your round", round[p], "for the amount of", prize[p], "rupees")
+  print(ques[p])
+  print(opt[p])
+  ans = input("enter the answer of question: ")
+
+  if (ans == sol[p]):
+    print("******correct ans you won ", prize[p], "ruppes********\n")
+  else:
+    print("!!!***Sorry Wrong answer***!!!")
+    break
+
+  p = p + 1
+if (prize[p] >= 800000):
+  print("You won ", prize[7], "ruppes")
+elif (prize[p] <= 800000):
+  print("You won ", prize[p-1], "ruppes")
